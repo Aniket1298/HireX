@@ -6,3 +6,10 @@ CREATE TABLE `recruiter` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
 )
+
+
+CREATE TABLE User (
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255),
+  PRIMARY KEY (email)
+);

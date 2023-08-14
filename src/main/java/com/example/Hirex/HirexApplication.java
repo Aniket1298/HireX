@@ -13,5 +13,4 @@ public class HirexApplication {
 		System.out.println("helo");
 
 	}
-
 }

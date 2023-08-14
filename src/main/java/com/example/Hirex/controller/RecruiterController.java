@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/recruiter")
 public class RecruiterController {
     @Autowired
@@ -29,7 +30,7 @@ public class RecruiterController {
         }
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody AuthRequest request ) throws ApiError {
         try{
             System.out.println(request.getEmail()+request.getPassword());
@@ -41,7 +42,7 @@ public class RecruiterController {
         }
     }
     @GetMapping("/")
-    public ResponseEntity<?> getRecruiter(@RequestHeader("token") String token){
+    public ResponseEntity<?> getRecruiter(@RequestHeader("Authorization") String token){
         try {
             RecruiterResponse recruiter = recruiterService.getRecruiter(token);
             return ResponseEntity.status(HttpStatus.OK).body(recruiter);

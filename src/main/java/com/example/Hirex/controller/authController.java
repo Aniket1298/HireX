@@ -52,10 +52,7 @@ public class authController {
                 null) {
             ResponseEntity.status(200).body("Invalid Credentials");
         }
-
-            
         return ResponseEntity.status(200).body(user);
-
     }
 
 }

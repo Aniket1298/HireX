@@ -1,7 +1,7 @@
 package com.example.Hirex.entity;
 
 public class AuthRequest {
-    private String email;
+    public String email;
     private String password;
     public String getEmail() {
         return email;

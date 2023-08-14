@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
         System.out.println("email "+email);
         User user = userRepository.findByEmail(email);
         System.out.println("user "+user);
-        System.out.println("user "+ userProfileRequest.getEmail()+" "+user.getEmail()+user.getPassword());
+        System.out.println("gere");
         if(user == null){
             throw new ApiError(HttpStatus.NOT_FOUND,"User not found");
         }
